@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的世界Minecraft周边商城</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <header id="header"></header>
+    <div id="body-container">
+        <div id="banner-container"> 
+            <a href="javascript:;"><img src="/imgs/index-banner.jpg" alt=""></a>
+        </div>
+        <div class="new-container">
+            <div class="fisrt-container">
+                <div class="show-header">
+                    <a href="">新品首发</a>
+                    <a href="">编辑推荐</a>
+                </div>
+                <div class="item-container" id="container-new">
+                    <!-- <div class="item">
+                        <div class="pic"><a href=""><img src="" alt=""></a></div>
+                        <p class="name"><a href="">买不起</a></p>
+                        <p class="price">12</p>
+                    </div>  模板引擎-->
+                    <script type="text/html" id="new-item">
+                        {{each list item}}
+                        <div class="item">
+                            <div class="pic"><a href=""><img src="{{item.pic}}" alt=""></a></div>
+                            <p class="name"><a href="">{{item.descript}}</a></p>
+                            <p class="price">{{item.price}}</p>
+                        </div>
+                        {{/each}}
+                    </script>                                      
+                </div>
+                <div class="kulipa"></div>
+            </div>
+        </div>
+        <div class="show-container">
+            <div class="container book-container">
+                <div class="content">
+                    <div class="content-header">
+                        <span>图书文具</span>
+                        <a href="javascript:;">更多产品></a>
+                    </div>
+                    <div class="content-body">
+                        <div class="left">
+
+                        </div>
+                        <div class="right">
+
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="container life-container">
+                <div class="content">
+                    <div class="content-header">
+                        <span>居家生活</span>
+                        <a href="javascript:;">更多产品></a>
+                    </div>
+                    <div class="content-body">
+                        <div class="left">
+
+                        </div>
+                        <div class="right">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container toy-container">
+                <div class="content">
+                    <div class="content-header">
+                        <span>手办玩具</span>
+                        <a href="javascript:;">更多产品></a>
+                    </div>
+                    <div class="content-body">
+                        <div class="left">
+
+                        </div>
+                        <div class="right">
+
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="container clothes-container">
+                <div class="content">
+                    <div class="content-header">
+                        <span>服装</span>
+                        <a href="javascript:;">更多产品></a>
+                    </div>
+                    <div class="content-body">
+                        <div class="left">
+
+                        </div>
+                        <div class="right">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="/libs/requirejs/require.js" data-main="/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+#footer{
+    width: 100%;
+    // height: 457px;
+    .top{
+        height: 195px;
+        padding: 34px 0;
+        background: #000;
+        .intro{
+            width: 476px;
+            height: 73px;
+            color: #b7b7b7;
+            padding: 50px 47px 0;
+            margin: 0 auto 27px;
+            h4{
+                margin: 0;
+                padding: 0;
+                font-size: 16px;
+                font-weight: normal;
+                text-align: center;
+                margin-bottom: 19px;
+            }
+            p{
+                margin: 0;
+                padding: 0;
+                font-size: 12px;
+            }
+        }
+        .service{
+            width: 222px;
+            height: 28px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            a{
+                display: inline-block;
+                width: 98px;
+                height: 26px;
+                line-height: 26px;
+                text-align: center;
+                font-size: 14px;
+                color: #b7b7b7;
+                border: 1px solid #b7b7b7;
+                border-radius: 1px;
+                &:hover{
+                    background: #666;
+                }
+            }
+        }
+    }
+    .bottom{
+        height: 167px;
+        padding-top: 37px;
+        background: #414141;
+        .seven{
+            width: 821px;
+            height: 51px;
+            margin: 0 auto;
+            margin-bottom: 27px;
+            padding-bottom: 30px;
+            padding-left: 269px;
+            border-bottom: 1px solid #4f4f4f;
+            span{
+                display: block;
+                float: left;
+                height: 50px;
+                margin-left: 49px;
+                font-size: 18px;
+                line-height: 50px;
+                color:#d3d3d3;
+                i{
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    float: left;
+                    margin-right: 17px;
+                    background-image: url(/imgs/icon-normal.png);
+                    background-repeat: no-repeat;
+                }
+            }
+            span:first-child i{
+                background-position: 0 -2013px;
+            }
+            span:last-child i{
+                background-position: 0 -2134px;
+            }
+        }
+        p{
+            width: 1090px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            a{
+                text-decoration: none;
+                color: #999;
+                margin-right: 15px;
+            }
+        }
+    }
+}
