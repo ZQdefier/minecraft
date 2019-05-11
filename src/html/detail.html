@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+<body>
+    <header id="header"></header>
+    <main>
+        <p class="top">
+            <a href="/">首页</a><i>&gt;</i>
+            <a href="/html/list?type=homelife">居家生活</a><i>&gt;</i>
+            <a href="/html/list?type=homelife&sort=cup">杯壶</a><i>&gt;</i>
+            <span>鱿鱼海滩 水杯 我的世界</span>
+        </p>
+        <div class="show">
+            <div class="img">
+
+            </div>
+            <div class="detail" id="detail-container">
+                <!-- <h3>鱿鱼海滩 水杯 我的世界</h3>
+                <h4>小鱿鱼守护的宝藏</h4>
+                <div class="shop-sale">
+                    <p class="sale-price"><span class="name">售价</span><b>￥85.00</b></p>
+                    <p class="service"><span class="name">服务</span> &nbsp;&nbsp; <span>·</span> 满88元免邮费&nbsp;&nbsp; <span>·</span> 7天无忧退换</p>
+                </div>
+                <div class="shop-type"><span class="name">类型</span><div>鱿鱼海滩</div></div>
+                <div class="shop-num"><span class="name">数量</span><div><span>1</span></div></div>
+                <div class="shop-btn">
+                    <div class="btn buy">立即购买</div>
+                    <div class="btn cart">加入购物车</div>
+                    <div class="btn collect">收藏</div>
+                </div> -->
+                <script type="text/html" id="detail-template">
+                    <h3>{{list.name}}</h3>
+                    <h4>{{list.title}}</h4>
+                    <div class="shop-sale">
+                        <p class="sale-price"><span class="name">售价</span><b>￥{{list.price}}</b></p>
+                        <p class="service"><span class="name">服务</span> &nbsp;&nbsp; <span>·</span> {{list.s1}}&nbsp;&nbsp; <span>·</span> {{list.s2}}</p>
+                    </div>
+                    <div class="shop-type"><span class="name">类型</span><div>{{list.type}}</div></div>
+                    <div class="shop-num"><span class="name">数量</span><div><span>1</span></div></div>
+                    <div class="shop-btn">
+                        <div class="btn buy">立即购买</div>
+                        <div class="btn cart">加入购物车</div>
+                        <div class="btn collect">收藏</div>
+                    </div>
+                </script>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left">
+                <div class="title">
+                    
+                </div>
+                <div class="pic">
+
+                </div>
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
+    </main>
+    <footer id="footer"></footer>
+    <script src="/libs/requirejs/require.js" data-main="/js/detail.js"></script>
+</body>
+</html>

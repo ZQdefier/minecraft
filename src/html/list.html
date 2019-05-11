@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/list.css">
+</head>
+<body>
+    <header id="header"></header>
+    <main>
+        <p class="top"><a href="/">首页</a><i>&gt;</i><span>居家生活</span></p>
+        <div class="banner">
+
+        </div>
+        <div class="list">
+            <div class="select list-wrap">
+
+            </div>
+            <div class="shop list-wrap">
+                <div class="sort">
+                    <h3>床品</h3>
+                    <p>守护你的美梦</p>
+                </div>
+                <ul class="bed-shop" id="bed">
+                    <li>
+                        <a href=""><img src="/imgs/left2-life.png" alt=""></a> 
+                        <p class="name"><a href="">铁傀儡四件套 我的世界</a></p>
+                        <p class="price">￥468.00</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="shop list-wrap">
+                <div class="sort">
+                    <h3>床品</h3>
+                    <p>守护你的美梦</p>
+                </div>
+                <ul class="bed-shop" id="bed-container">
+                    <!--  模板引擎-->
+                    <script type="text/html" id="bed-template">
+                        {{each list item}}
+                            <li data-index="{{item.id}}">
+                                <a href="/html/detail.html?type=homelife&sort=cup&itemId={{item.id}}"><img src="{{item.img}}" alt=""></a> 
+                                <p class="name"><a href="/html/detail.html?type=homelife&sort=cup&itemId={{item.id}}">{{item.name}}</a></p>
+                                <p class="price">￥{{item.price}}</p>
+                            </li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+            <div class="shop list-wrap">
+                    <div class="sort">
+                        <h3>床品</h3>
+                        <p>守护你的美梦</p>
+                    </div>
+                    <ul class="bed-shop" id="bed">
+                        <li>
+                            <a href="javascript:;"><img src="/imgs/left2-life.png" alt=""></a> 
+                            <p class="name"><a href="javascript:;">铁傀儡四件套 我的世界</a></p>
+                            <p class="price">￥468.00</p>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </main>
+    <footer id="footer"></footer>
+    <script src="/libs/requirejs/require.js" data-main="/js/list.js"></script>
+</body>
+</html>
