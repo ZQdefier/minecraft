@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+<body>
+    <header id="header"></header>
+    <main id="main">
+        <div class="top">
+            <div class="checkbox">
+                <input type="checkbox" id="allCheck" class="checkbtn">
+                <span>全选</span>
+            </div>
+            <div class="item">商品信息</div>
+            <div class="price">单价</div>
+            <div class="num">数量</div>
+            <div class="total">小计</div>
+            <div class="action">活动</div>
+        </div>
+        <div class="content" id="template-container">           
+            <script type="text/html" id="container-template">
+                {{each cart item}}
+                <div class="item-container" data-id="{{item.id}}">
+                    <div class="item-check">
+                        <input type="checkbox" id="" class="checkbtn">
+                    </div>
+                    <div class="item-name">
+                        <a href=""><img src="{{item.imgs[0]}}" alt=""></a>
+                        <div><a href="/html/detail.html?type=homelife%sort=cup&itemId={{item.id}}">{{item.name}}</a></div>
+                    </div>
+                    <div class="item-price">
+                        ￥<span class='price'>{{item.price}}</span>
+                    </div>
+                    <div class="item-num">
+                        <div class="form">
+                            <span class='less'>-</span><input type="text" class='num' value="{{item.num}}"><span class='more'>+</span>
+                        </div>
+                    </div>
+                    <div class="item-total">
+                        ￥<span class='res'>{{item.price*item.num}}</span>
+                    </div>
+                    <div class="item-action">
+                        <span id='del'></span>
+                    </div>
+                </div>
+                {{/each}}
+            </script>
+        </div>
+        <div class="bottom">
+            <div class="checkbox">
+                <input type="checkbox" id="allCheck" class="checkbtn">
+                <span class="allCheck">全选</span>
+                <span class="checked">已选（</span>
+                <span class="checked" id="checkNum">1</span>
+                <span class="checked">）</span>
+                <a href="javascript:;">批量删除</a>
+            </div>
+            <div class="calc">
+                <h4>应付总额：<span>￥</span><span id="pay">464.00</span></h4>
+                <p>合计金额:￥<span id="allPay">464.00</span></p>
+            </div>
+            <div class="buy">
+                下单
+            </div>
+        </div>
+    </main>
+    <div id="main-empty">
+        <div>
+            <p>购物车是空的</p>
+            <p><a href="/">继续购物</a></p>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="/libs/requirejs/require.js" data-main="/js/cart.js"></script>
+</body>
+</html>

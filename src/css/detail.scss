@@ -30,9 +30,31 @@ main{
         display: flex;
         justify-content: space-between;
         .img{
-            width: 530px;
-            height: 468px;
+            width: 480px;
+            height: 428px;
+            padding:40px 35px 0 15px;
             background: #fff;
+            display: flex;
+            justify-content: space-between;
+            .view_bd{
+                width: 390px;
+                height: 390px;
+                background: gray;
+                >img{
+                    width: 390px;
+                    height: 390px;
+                }
+            }
+            .view-ul>li{
+                width: 70px;
+                height: 70px;
+                margin-bottom: 10px;
+                background: #156c00;
+                img{
+                    width: 70px;
+                    height: 70px;
+                }
+            }
         }
         .detail{
             width: 518px;
@@ -103,6 +125,7 @@ main{
                 .btn{
                     float: left;
                     margin-right: 10px;
+                    cursor: pointer;
                 }
                 .buy,.cart{
                     width: 160px;

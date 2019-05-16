@@ -22,21 +22,83 @@
                 line-height: 36px;
                 
             }
+            .relative{
+                position: relative;
+                line-height: 36px;
+                .onlogin{
+                    display: none;
+                }
+                a{
+                    color: #a0ccee;
+                    >span{
+                        display: none;
+                    }
+                }
+            }
+            .fixed{
+                position: fixed;
+                z-index: 5;
+                top: 20px;
+                left: 1000px;
+                b{
+                    display: none;
+                }
+                >a{
+                    font-size: 14px;
+                    color: #fff;
+                    margin-right: 20px;
+                }
+                .onlogin{
+                    display: none;
+                }
+                .service{
+                    display: none;
+                }
+                .cart{
+                    display: inline-block;
+                    height: 17px;
+                    width: 19px;
+                    margin-left: 30px;
+                    background:url(/imgs/icon-normal.png) no-repeat 0 -686px;
+                    #cart-num{
+                        display: inline-block;
+                        position: absolute;
+                        top: -10px;
+                        left:15px;
+                        font-size: 12px;
+                        min-width: 16px;
+                        height: 16px;
+                        line-height: 18px;
+                        text-align: center;
+                        color: #5c3d29;
+                        border-radius: 16px;
+                        background: #dff459;
+                    }
+                }
+            }
             .right{
                 float: right;
                 margin-right: 10px;
                 font-size: 12px;
-                line-height: 36px;
                  a{
+                    position: relative;
                     float: left;
-                    color: #a0ccee;
                     margin-right: 20px;
                     text-decoration: none;
                     &:hover{
                         color: #fff;
+                    }
+                    >b{
+                        font-size: 12px;
+                        font-weight: normal;
+                        cursor: pointer;
+                        margin: 0;
+                        &:hover{
+                            color: #fff;
+                        }
                     }                
                  }
-                 span{
+                 b{
                      float: left;
                      font-size: 16px;
                      font-weight:100;
@@ -115,7 +177,7 @@
     }
     #nav{
         position: absolute;
-        bottom: 0;
+        top: 279px;
         width: 100%;
         height: 68px;
         background: #689232;
@@ -125,8 +187,16 @@
             background-color: #a7de47;
             border-bottom: 1px solid #bff365;
         }
-        .nav-container{
+        .relative{
             position: relative;
+            .logo{
+                display: none;
+            }
+            .login-container{
+                display: none;
+            }
+        }
+        .nav-container{            
             width: 100%;
             height: 59px;
             >ul{
@@ -196,6 +266,45 @@
                 }
                 li:hover .drop-container{
                     display: block;
+                }
+            }
+        }
+        .fixed{
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 62px; 
+            background: #689232;
+            .logo{
+                display: inline-block;
+                position: absolute;
+                z-index: 2;
+                top: 13px;
+                left: 110px;
+                width: 105px;
+                height: 40px;
+                background-position: 0 -347px;
+                background-image: url(/imgs/header-logo.png);
+                background-repeat: no-repeat;
+            }
+            >ul{
+                width: 800px;
+                >li{
+                    width: auto;
+                    height: 62px;
+                    padding: 0 20px;
+                    >a{
+                        width: auto;
+                        height: 50px;
+                        font-weight: normal;
+                        color: #e0ff8b;
+                        &:hover{
+                            border-bottom: 2px solid #e0ff8b;
+                            background: none;;
+                        }
+                    }
                 }
             }
         }

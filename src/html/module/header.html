@@ -2,14 +2,16 @@
     <div id="header-modal">
         <div class="wrap">
             <p class="left">《我的世界》周边商城</p>
-            <div class="right">
-                <a href="/html/login.html">登录</a>
-                <span>|</span>
-                <a href="/html/register.html">注册</a>
-                <span>|</span>
-                <a href="javascript:;">购物车</a>
-                <span>|</span>
-                <a href="javascript:;">客户服务</a>
+            <div class="right relative" id="login-container">
+                <a href="/html/login.html" id="login" class="unlogin">登录</a>
+                <a href='javascript:;' class="onlogin">欢迎你</a><a  href='javascript:;' class="onlogin" id="username"></a>
+                <b>|</b>
+                <a href="/html/register.html" id="register" class="unlogin">注册</a>
+                <a href='javascript:;' class="onlogin" id="loginOut">退出</a>
+                <b>|</b>
+                <a href="/html/cart.html" id="cart" class="cart"><b>购物车</b><span id="cart-num">0</span></a>
+                <b>|</b>
+                <a href="javascript:;" class="service">客户服务</a>
             </div>
         </div>
     </div>
@@ -29,7 +31,8 @@
     </div>
     <div id="nav">
         <div class="top"></div>
-        <div class="nav-container">
+        <div class="relative nav-container" id="nav-container">
+            <a href="/" class="logo"></a>
             <ul>
                 <li><a href="/">首页</a></li>
                 <li>
@@ -81,11 +84,6 @@
                 <li><a href="/html/list.html?type=book">图书文具</a></li>
                 <li><a href="/html/list.html?type=digital">数码外设</a></li>
             </ul>
-        
-        
-        
-        
         </div>
-        <div></div>
     </div>
 </div>

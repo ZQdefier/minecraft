@@ -12,15 +12,43 @@
     <main>
         <p class="top">
             <a href="/">首页</a><i>&gt;</i>
-            <a href="/html/list?type=homelife">居家生活</a><i>&gt;</i>
-            <a href="/html/list?type=homelife&sort=cup">杯壶</a><i>&gt;</i>
+            <a href="/html/list.html?type=homelife">居家生活</a><i>&gt;</i>
+            <a href="/html/list.html?type=homelife&sort=cup">杯壶</a><i>&gt;</i>
             <span>鱿鱼海滩 水杯 我的世界</span>
         </p>
-        <div class="show">
-            <div class="img">
-
-            </div>
-            <div class="detail" id="detail-container">
+        <div class="show" id="detail-container">
+            <script type="text/html" id="detail-template">
+                <div class="img">
+                    <div class="view_bd">
+                        <img class="zoom-img" src="{{list.imgs[0]}}" data-zoom-image="{{list.imgs[0]}}"/>
+                    </div>
+                    <div class="view_thumbs" id="gal1">
+                        <ul class="view-ul">
+                            <li class="current">
+                                <a href="#" data-image="{{list.imgs[0]}}" data-zoom-image="{{list.imgs[0]}}">
+                                    <img class="s" src="{{list.imgs[0]}}" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-image="{{list.imgs[1]}}" data-zoom-image="{{list.imgs[1]}}">
+                                <img class="s" src="{{list.imgs[1]}}" /></a>
+                            </li>
+                            <li>
+                                <a href="#" data-image="{{list.imgs[2]}}" data-zoom-image="{{list.imgs[2]}}">
+                                <img class="s" src="{{list.imgs[2]}}" /></a>
+                            </li>
+                            <li>
+                                <a href="#" data-image="{{list.imgs[3]}}" data-zoom-image="{{list.imgs[3]}}">
+                                <img class="s" src="{{list.imgs[3]}}" /></a>
+                            </li>
+                            <li>
+                                <a href="#" data-image="{{list.imgs[4]}}" data-zoom-image="{{list.imgs[4]}}">
+                                <img class="s" src="{{list.imgs[4]}}" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail">
                 <!-- <h3>鱿鱼海滩 水杯 我的世界</h3>
                 <h4>小鱿鱼守护的宝藏</h4>
                 <div class="shop-sale">
@@ -34,7 +62,6 @@
                     <div class="btn cart">加入购物车</div>
                     <div class="btn collect">收藏</div>
                 </div> -->
-                <script type="text/html" id="detail-template">
                     <h3>{{list.name}}</h3>
                     <h4>{{list.title}}</h4>
                     <div class="shop-sale">
@@ -44,12 +71,12 @@
                     <div class="shop-type"><span class="name">类型</span><div>{{list.type}}</div></div>
                     <div class="shop-num"><span class="name">数量</span><div><span>1</span></div></div>
                     <div class="shop-btn">
-                        <div class="btn buy">立即购买</div>
-                        <div class="btn cart">加入购物车</div>
-                        <div class="btn collect">收藏</div>
+                        <div class="btn buy" id="buy">立即购买</div>
+                        <div class="btn cart" id="addCart">加入购物车</div>
+                        <div class="btn collect" id="collect">收藏</div>
                     </div>
-                </script>
-            </div>
+                </div>
+            </script>
         </div>
         <div class="content">
             <div class="left">
